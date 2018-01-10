@@ -2,9 +2,10 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Brian Whitacre.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
+#    1
 ########################################################################
 # Students:
 #
@@ -13,8 +14,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #     1 is very easy
 #     3 is an "easy" Test 2 question.
 #     5 is a "typical" Test 2 question.
-#     7 is a "hard" Test 2 question.
-#    10 is an EXTREMELY hard problem (too hard for a Test 2 question)
+#     7 is a "hard" Test 2 question.0 is an EXTREMELY hard problem (too hard for a Test 2 question)
 #
 #  TIME ratings: A ROUGH estimate of the number of minutes that we
 #     would expect a well-prepared student to take on the problem.
@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -55,6 +55,34 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+
+    test_val = [2, 10, 5, -20, 8]
+    expected = [8,16,11,-14,14]
+    print("Test 1")
+    print('Expected:', expected)
+    print('Real:    ',practice_problem2a(test_val, 6))
+
+    test_val = [10]
+    expected = [16]
+    print("Test 2")
+    print('Expected:', expected)
+    print('Real:    ', practice_problem2a(test_val, 6))
+
+    test_val = [66, 188, 45, -40, 6]
+    expected = [72, 194, 51, -34, 12]
+    print("Test 3")
+    print('Expected:', expected)
+    print('Real:    ', practice_problem2a(test_val, 6))
+
+    test_val = [ -50, 7]
+    expected = [-44, 13]
+    print("Test 4")
+    print('Expected:', expected)
+    print('Real:    ', practice_problem2a(test_val, 6))
+
+
+
+
 
 
 def practice_problem2a(sequence, delta):
@@ -76,13 +104,19 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   5 minutes.
     ####################################################################
+    final_list = []
+    for i in sequence:
+        added = i + delta
+        final_list.append(added)
+    return final_list
+
 
 
 def run_test_practice_problem2b():
@@ -177,6 +211,15 @@ def practice_problem2b(sequence):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   10 minutes.
     ####################################################################
+    final_str = ''
+    for i in sequence:
+        if i == '':
+            pass
+        else:
+            final_str += i[0]
+    return final_str
+
+
 
 
 # ----------------------------------------------------------------------
